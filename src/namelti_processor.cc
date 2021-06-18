@@ -30,7 +30,7 @@ NameltiProcessor::NameltiProcessor(): transcripter(NameltiTranscripter()) {
 NameltiProcessor::~NameltiProcessor() {
 }
 
-std::vector<std::pair<std::string, float>>  NameltiProcessor::ConvertName(std::string query, size_t nbest_num = 5) {
+std::vector<std::pair<std::string, float>>  NameltiProcessor::ConvertName(std::string query, size_t nbest_num) {
   std::vector<std::pair<std::string, float>> processor_result;
   try{
     std::vector<std::string> queries;
@@ -47,7 +47,7 @@ std::vector<std::pair<std::string, float>>  NameltiProcessor::ConvertName(std::s
   return processor_result;
 }
 
-std::map<std::string, std::vector<std::pair<std::string, float>>> NameltiProcessor::ConvertNameList(std::vector<std::string> queries, size_t nbest_num = 5) {
+std::map<std::string, std::vector<std::pair<std::string, float>>> NameltiProcessor::ConvertNameList(std::vector<std::string> queries, size_t nbest_num) {
   std::map<std::string, std::vector<std::pair<std::string, float>>> processor_result;
 
   try{

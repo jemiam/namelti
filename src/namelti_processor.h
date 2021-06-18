@@ -29,8 +29,8 @@ class NameltiProcessor {
 public:
   NameltiProcessor();
   virtual ~NameltiProcessor();
-  std::vector<std::pair<std::string, float>> ConvertName(std::string, size_t);
-  std::map<std::string, std::vector<std::pair<std::string, float>>> ConvertNameList(std::vector<std::string>, size_t);
+  std::vector<std::pair<std::string, float>> ConvertName(std::string, size_t = 5);
+  std::map<std::string, std::vector<std::pair<std::string, float>>> ConvertNameList(std::vector<std::string>, size_t = 5);
 private:
   NameltiTranscripter transcripter;
 };
